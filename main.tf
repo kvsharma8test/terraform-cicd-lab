@@ -1,6 +1,6 @@
 terraform {
   required_version = ">= 1.6.0"
- 
+
   required_providers {
     local = {
       source  = "hashicorp/local"
@@ -12,12 +12,12 @@ terraform {
     }
   }
 }
- 
+
 # Generates a random, readable "server" name, e.g. "brave-otter"
 resource "random_pet" "server" {
   length = 3
 }
- 
+
 # Our "infrastructure": a config file written to disk
 resource "local_file" "app_config" {
   filename = "${path.module}/output/${var.environment}-app.txt"
