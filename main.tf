@@ -15,7 +15,7 @@ terraform {
  
 # Generates a random, readable "server" name, e.g. "brave-otter"
 resource "random_pet" "server" {
-  length = 2
+  length = 3
 }
  
 # Our "infrastructure": a config file written to disk
